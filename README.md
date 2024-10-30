@@ -1,11 +1,27 @@
 # Proyecto PostgreSQL en Docker
 
-Este proyecto configura una base de datos PostgreSQL en Docker.
+Este proyecto configura una base de datos PostgreSQL en Docker utilizando Docker Compose para facilitar la ejecución y persistencia de datos.
 
 ## Requisitos
 - Docker
+- Docker Compose
+
+## Configuración
+
+El proyecto contiene:
+- Un archivo `docker-compose.yml` que define el servicio PostgreSQL, configurando el usuario, contraseña, y base de datos.
+- Un archivo `.sql` con los comandos para crear e insertar datos en una tabla de ejemplo.
 
 ## Pasos para iniciar
-1. Ejecutar el contenedor:
-   ```bash
-   docker run --name contenedor_plan_de_carrera -e POSTGRES_USER=aleira -e POSTGRES_PASSWORD=shifta20 -e POSTGRES_DB=sql_dev -p 5432:5432 -v C:/postgres_data:/var/lib/postgresql/data -d postgres
+
+1. Clona el repositorio:
+   En Gitbash
+   git clone https://github.com/agustinleira/contenedores.git
+   cd contenedores
+
+
+## Levantar los servicios
+docker-compose up -d
+
+## Apagar los servicios
+docker-compose down
