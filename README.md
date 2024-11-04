@@ -25,3 +25,9 @@ docker-compose up -d
 
 ## Apagar los servicios
 docker-compose down
+
+## Permisos para escribir la carpeta de postgresql:
+chmod -R 0700 ./postgres_data
+
+## Para levantar la información debe ir a:
+http://localhost:8080/mujeres

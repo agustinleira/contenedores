@@ -18,3 +18,16 @@ services:
       interval: 12s
       timeout: 5s
       retries: 5
+      
+  web:
+    build: ./web
+    container_name: app_web
+    ports:
+      - "8080:8080"
+    environment:
+      - POSTGRES_USER=aleira
+      - POSTGRES_PASSWORD=shifta20
+      - POSTGRES_DB=sql_dev
+      - POSTGRES_HOST=postgres
+    depends_on:
+      - postgres
